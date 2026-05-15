@@ -1,0 +1,267 @@
+@misc{darpa_mocha_2024,
+  author       = {{Defense Advanced Research Projects Agency (DARPA)}},
+  title        = {Machine Learning and Optimization-Guided Compilers for Heterogeneous Architectures (MOCHA): Proposers Day Slides},
+  year         = {2024},
+  howpublished = {\url{https://www.darpa.mil/sites/default/files/attachment/2024-11/mocha-proposers-day-slides.pdf}},
+  note         = {Accessed: 2026-05-05}
+}
+
+@InProceedings{10.1007/BFb0054170,
+author="Pnueli, A.
+and Siegel, M.
+and Singerman, E.",
+editor="Steffen, Bernhard",
+title="Translation validation",
+booktitle="Tools and Algorithms for the Construction and Analysis of Systems",
+year="1998",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="151--166",
+abstract="We present the notion of translation validation as a new approach to the verification of translators (compilers, code generators). Rather than proving in advance that the compiler always produces a target code which correctly implements the source code (compiler verification), each individual translation (i.e. a run of the compiler) is followed by a validation phase which verifies that the target code produced on this run correctly implements the submitted source program. Several ingredients are necessary to set up the --- fully automatic --- translation validation process, among which are:1.A common semantic framework for the representation of the source code and the generated target code.2.A formalization of the notion of ``correct implementation'' as a refinement relation.3.A syntactic simulation-based proof method which allows to automatically verify that one model of the semantic framework, representing the produced target code, correctly implements another model which represents the source.",
+isbn="978-3-540-69753-4"
+}
+
+@InProceedings{10.1007/978-3-642-22110-1_55,
+author="Ramos, David A.
+and Engler, Dawson R.",
+editor="Gopalakrishnan, Ganesh
+and Qadeer, Shaz",
+title="Practical, Low-Effort Equivalence Verification of Real Code",
+booktitle="Computer Aided Verification",
+year="2011",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="669--685",
+abstract="Verifying code equivalence is useful in many situations, such as checking: yesterday's code against today's, different implementations of the same (standardized) interface, or an optimized routine against a reference implementation. We present a tool designed to easily check the equivalence of two arbitrary C functions. The tool provides guarantees far beyond those possible with testing, yet it often requires less work than writing even a single test case. It automatically synthesizes inputs to the routines and uses bit-accurate, sound symbolic execution to verify that they produce equivalent outputs on a finite number of paths, even for rich, nested data structures. We show that the approach works well, even on heavily-tested code, where it finds interesting errors and gets high statement coverage, often exhausting all feasible paths for a given input size. We also show how the simple trick of checking equivalence of identical code turns the verification tool chain against itself, finding errors in the underlying compiler and verification tool.",
+isbn="978-3-642-22110-1"
+}
+
+@article{10.1145/982962.964003,
+author = {Benton, Nick},
+title = {Simple relational correctness proofs for static analyses and program transformations},
+year = {2004},
+issue_date = {January 2004},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {39},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/982962.964003},
+doi = {10.1145/982962.964003},
+abstract = {We show how some classical static analyses for imperative programs, and the optimizing transformations which they enable, may be expressed and proved correct using elementary logical and denotationaltechniques. The key ingredients are an interpretation of program properties as relations, rather than predicates, and a realization that although many program analyses are traditionally formulated in very intensional terms, the associated transformations are actually enabled by more liberal extensional properties.We illustrate our approach with formal systems for analysing and transforming while-programs. The first is a simple type system which tracks constancy and dependency information and can be used to perform dead-code elimination, constant propagation and program slicing as well as capturing a form of secure information flow. The second is a relational version of Hoare logic, which significantly generalizes our first type system and can also justify optimizations including hoisting loop invariants. Finally we show how a simple available expression analysis and redundancy elimination transformation may be justified by translation into relational Hoare logic.},
+journal = {SIGPLAN Not.},
+month = jan,
+pages = {14–25},
+numpages = {12},
+keywords = {types, security, program analysis, partial equivalence relations, optimizing compilation, information flow, dependency, denotational semantics, Hoare logic}
+}
+
+@inproceedings{10.1145/964001.964003,
+author = {Benton, Nick},
+title = {Simple relational correctness proofs for static analyses and program transformations},
+year = {2004},
+isbn = {158113729X},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/964001.964003},
+doi = {10.1145/964001.964003},
+abstract = {We show how some classical static analyses for imperative programs, and the optimizing transformations which they enable, may be expressed and proved correct using elementary logical and denotationaltechniques. The key ingredients are an interpretation of program properties as relations, rather than predicates, and a realization that although many program analyses are traditionally formulated in very intensional terms, the associated transformations are actually enabled by more liberal extensional properties.We illustrate our approach with formal systems for analysing and transforming while-programs. The first is a simple type system which tracks constancy and dependency information and can be used to perform dead-code elimination, constant propagation and program slicing as well as capturing a form of secure information flow. The second is a relational version of Hoare logic, which significantly generalizes our first type system and can also justify optimizations including hoisting loop invariants. Finally we show how a simple available expression analysis and redundancy elimination transformation may be justified by translation into relational Hoare logic.},
+booktitle = {Proceedings of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+pages = {14–25},
+numpages = {12},
+keywords = {types, security, program analysis, partial equivalence relations, optimizing compilation, information flow, dependency, denotational semantics, Hoare logic},
+location = {Venice, Italy},
+series = {POPL '04}
+}
+
+@article{10.1145/360248.360252,
+author = {King, James C.},
+title = {Symbolic execution and program testing},
+year = {1976},
+issue_date = {July 1976},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {19},
+number = {7},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/360248.360252},
+doi = {10.1145/360248.360252},
+abstract = {This paper describes the symbolic execution of programs. Instead of supplying the normal inputs to a program (e.g. numbers) one supplies symbols representing arbitrary values. The execution proceeds as in a normal execution except that values may be symbolic formulas over the input symbols. The difficult, yet interesting issues arise during the symbolic execution of conditional branch type statements. A particular system called EFFIGY which provides symbolic execution for program testing and debugging is also described. It interpretively executes programs written in a simple PL/I style programming language. It includes many standard debugging features, the ability to manage and to prove things about symbolic expressions, a simple program testing manager, and a program verifier. A brief discussion of the relationship between symbolic execution and program proving is also included.},
+journal = {Commun. ACM},
+month = jul,
+pages = {385–394},
+numpages = {10},
+keywords = {symbolic interpretation, symbolic execution, program verification, program testing, program proving, program debugging}
+}
+
+@inproceedings{10.1145/1453101.1453131,
+author = {Person, Suzette and Dwyer, Matthew B. and Elbaum, Sebastian and Pundefinedsundefinedreanu, Corina S.},
+title = {Differential symbolic execution},
+year = {2008},
+isbn = {9781595939951},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1453101.1453131},
+doi = {10.1145/1453101.1453131},
+abstract = {Detecting and characterizing the effects of software changes is a fundamental component of software maintenance. Version differencing information can be used to perform version merging, infer change characteristics, produce program documentation, and guide program re-validation. Existing techniques for characterizing code changes, however, are imprecise leading to unnecessary maintenance efforts.In this paper, we introduce a novel extension and application of symbolic execution techniques that computes a precise behavioral characterization of a program change. This technique, which we call differential symbolic execution (DSE), exploits the fact that program versions are largely similar to reduce cost and improve the quality of analysis results. We define the foundational concepts of DSE, describe cost-effective tool support for DSE, and illustrate its potential benefit through an exploratory study that considers version histories of two Java code bases.},
+booktitle = {Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+pages = {226–237},
+numpages = {12},
+keywords = {symbolic execution, software evolution, program differencing},
+location = {Atlanta, Georgia},
+series = {SIGSOFT '08/FSE-16}
+}
+
+@article{10.1145/357980.358001,
+author = {Hoare, C. A. R.},
+title = {An axiomatic basis for computer programming},
+year = {1983},
+issue_date = {Jan. 1983},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {26},
+number = {1},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/357980.358001},
+doi = {10.1145/357980.358001},
+abstract = {In this paper an attempt is made to explore the logical foundations of computer programming by use of techniques which were first applied in the study of geometry and have later been extended to other branches of mathematics. This involves the elucidation of sets of axioms and rules of inference which can be used in proofs of the properties of computer programs. Examples are given of such axioms and rules, and a formal proof of a simple theorem is displayed. Finally, it is argued that important advantages, both theoretical and practical, may follow from a pursuance of these topics.},
+journal = {Commun. ACM},
+month = jan,
+pages = {53–56},
+numpages = {4},
+keywords = {theory of programming, proofs of programs, proofs of program, programming language design, program documentation, machine-independent programming, formal language definition, axiomatic method}
+}
+
+@inproceedings{Barthe2011RelationalVU,
+  title={Relational Verification Using Product Programs},
+  author={Gilles Barthe and Juan Manuel Crespo and C{\'e}sar Kunz},
+  booktitle={World Congress on Formal Methods},
+  year={2011},
+  url={https://api.semanticscholar.org/CorpusID:5854250}
+}
+
+@inproceedings{10.1145/3314221.3314596,
+author = {Churchill, Berkeley and Padon, Oded and Sharma, Rahul and Aiken, Alex},
+title = {Semantic program alignment for equivalence checking},
+year = {2019},
+isbn = {9781450367127},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3314221.3314596},
+doi = {10.1145/3314221.3314596},
+abstract = {We introduce a robust semantics-driven technique for program equivalence checking. Given two functions we find a trace alignment over a set of concrete executions of both programs and construct a product program particularly amenable to checking equivalence. We demonstrate that our algorithm is applicable to challenging equivalence problems beyond the scope of existing techniques. For example, we verify the correctness of the hand-optimized vector implementation of strlen that ships as part of the GNU C Library, as well as the correctness of vectorization optimizations for 56 benchmarks derived from the Test Suite for Vectorizing Compilers.},
+booktitle = {Proceedings of the 40th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+pages = {1027–1040},
+numpages = {14},
+keywords = {equivalence checking, verification},
+location = {Phoenix, AZ, USA},
+series = {PLDI 2019}
+}
+
+@techreport{HR001124S0035,
+  author      = {{Peraton Labs}},
+  title       = {Volume I, Technical and Management Proposal},
+  institution = {Peraton Labs},
+  year        = {2025},
+  type        = {Technical Proposal},
+}
+
+@misc{benchmarks_repo,
+  author       = {Kaplan, Michael},
+  title        = {macchiato},
+  year         = {2026},
+  howpublished = {\url{https://github.com/mocha-macchiato-compiler/macchiato}},
+  note         = {Accessed: 2026-05-05}
+}
+
+@misc{kroening2023cbmccboundedmodel,
+      title={CBMC: The C Bounded Model Checker}, 
+      author={Daniel Kroening and Peter Schrammel and Michael Tautschnig},
+      year={2023},
+      eprint={2302.02384},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2302.02384}, 
+}
+
+@misc{proofwright2025,
+  author       = {Chatterjee, Bodhisatwa and Zagieboylo, Drew and Damani, Sana and Hari, Siva and Kozyrakis, Christos},
+  title        = {{ProofWright: Towards Agentic Formal Verification of CUDA}},
+  year         = {2025},
+  eprint       = {2511.12294},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.SE},
+  url          = {https://arxiv.org/abs/2511.12294},
+  note         = {Submitted November 15, 2025}
+}
+
+@book{kirk2010programming,
+  author    = {Kirk, David B. and Hwu, Wen-mei W.},
+  title     = {Programming Massively Parallel Processors: A Hands-on Approach},
+  publisher = {Morgan Kaufmann},
+  year      = {2010},
+  edition   = {1st},
+  isbn      = {9780123814722}
+}
+
+@techreport{harris2007optimizing,
+  author      = {Harris, Mark},
+  title       = {Optimizing Parallel Reduction in {CUDA}},
+  institution = {NVIDIA Developer Technology},
+  year        = {2007},
+  url         = {https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf}
+}
+
+@misc{shanmugavelu2024fpna,
+  author        = {Shanmugavelu, Sanjif and others},
+  title         = {Impacts of Floating-Point Non-Associativity on Reproducibility for {HPC} and Deep Learning Applications},
+  year          = {2024},
+  eprint        = {2408.05148},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.MS},
+  url           = {https://arxiv.org/abs/2408.05148}
+}
+
+@article{10.1145/2398857.2384625,
+author = {Betts, Adam and Chong, Nathan and Donaldson, Alastair and Qadeer, Shaz and Thomson, Paul},
+title = {GPUVerify: a verifier for GPU kernels},
+year = {2012},
+issue_date = {October 2012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {47},
+number = {10},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2398857.2384625},
+doi = {10.1145/2398857.2384625},
+abstract = {We present a technique for verifying race- and divergence-freedom of GPU kernels that are written in mainstream kernel programming languages such as OpenCL and CUDA. Our approach is founded on a novel formal operational semantics for GPU programming termed synchronous, delayed visibility (SDV) semantics. The SDV semantics provides a precise definition of barrier divergence in GPU kernels and allows kernel verification to be reduced to analysis of a sequential program, thereby completely avoiding the need to reason about thread interleavings, and allowing existing modular techniques for program verification to be leveraged. We describe an efficient encoding for data race detection and propose a method for automatically inferring loop invariants required for verification. We have implemented these techniques as a practical verification tool, GPUVerify, which can be applied directly to OpenCL and CUDA source code. We evaluate GPUVerify with respect to a set of 163 kernels drawn from public and commercial sources. Our evaluation demonstrates that GPUVerify is capable of efficient, automatic verification of a large number of real-world kernels.},
+journal = {SIGPLAN Not.},
+month = oct,
+pages = {113–132},
+numpages = {20},
+keywords = {GPUs, barrier synchronization, concurrency, data races, verification}
+}
+
+@inproceedings{
+ouyang2025kernelbench,
+title={KernelBench: Can {LLM}s Write Efficient {GPU} Kernels?},
+author={Anne Ouyang and Simon Guo and Simran Arora and Alex L Zhang and William Hu and Christopher Re and Azalia Mirhoseini},
+booktitle={Forty-second International Conference on Machine Learning},
+year={2025},
+url={https://openreview.net/forum?id=yeoN1iQT1x}
+}
+
+@inproceedings{10.1007/978-3-319-06410-9_9,
+author = {Blom, Stefan and Huisman, Marieke},
+title = {The VerCors Tool for Verification of Concurrent Programs},
+year = {2014},
+isbn = {9783319064093},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-319-06410-9_9},
+doi = {10.1007/978-3-319-06410-9_9},
+abstract = {The VerCors tool implements thread-modular static verification of concurrent programs, annotated with functional properties and heap access permissions. The tool supports both generic multithreaded and vector-based programming models. In particular, it can verify multithreaded programs written in Java, specified with JML extended with separation logic. It can also verify parallelizable programs written in a toy language that supports the characteristic features of OpenCL. The tool verifies programs by first encoding the specified program into a much simpler programming language and then applying the Chalice verifier to the simplified program. In this paper we discuss both the implementation of the tool and the features of its specification language.},
+booktitle = {Proceedings of the 19th International Symposium on FM 2014: Formal Methods - Volume 8442},
+pages = {127–131},
+numpages = {5}
+}
