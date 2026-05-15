@@ -1,0 +1,14 @@
+# Lean4 / Lake
+.lake/packages/
+.lake/build/
+*.olean
+*.ilean
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,7 @@
+#include <iostream>
+#include <cuda.h>
+#include <chrono>
+
+__global__ void oddEvenPass(int* data,int N,int pass){ int idx=blockIdx.x*blockDim.x+threadIdx.x; int i = 2*idx + (pass & 1); if(i+1 < N){ if(data[i] > data[i+1]){ int tmp=data[i]; data[i]=data[i+1]; data[i+1]=tmp; } } }
+
+int main(){ static const int N=20000; static const int TPB=256; auto cpu_start=std::chrono::high_resolution_clock::now(); int* h_data=new int[N]; for(int i=0;i<N;++i) h_data[i]=(N-i)*37 % 100000; int *d_data; cudaMalloc(&d_data,N*sizeof(int)); cudaMemcpy(d_data,h_data,N*sizeof(int),cudaMemcpyHostToDevice); int blocks=(N+2*TPB-1)/(2*TPB); cudaEvent_t start,stop; cudaEventCreate(&start); cudaEventCreate(&stop); cudaEventRecord(start); for(int pass=0; pass<N; ++pass){ oddEvenPass<<<blocks,TPB>>>(d_data,N,pass); } cudaDeviceSynchronize(); cudaEventRecord(stop); cudaEventSynchronize(stop); float gpu_time_ms=0; cudaEventElapsedTime(&gpu_time_ms,start,stop); cudaMemcpy(h_data,d_data,N*sizeof(int),cudaMemcpyDeviceToHost); long long checksum=0; for(int i=0;i<N;i+=100) checksum += h_data[i]; auto cpu_end=std::chrono::high_resolution_clock::now(); double cpu_time_ms=std::chrono::duration<double,std::milli>(cpu_end-cpu_start).count(); size_t dynamic_bytes=N*sizeof(int); size_t static_bytes=sizeof(N)+sizeof(TPB); std::cout<<"Result: "<<checksum<<"\n"; std::cout<<"cpu_time_ms,gpu_time_ms,dynamic_mem_bytes,static_mem_bytes\n"; std::cout<<cpu_time_ms<<","<<gpu_time_ms<<","<<dynamic_bytes<<","<<static_bytes<<"\n"; delete[] h_data; cudaFree(d_data); return 0; }
